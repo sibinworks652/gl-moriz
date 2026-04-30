@@ -1,26 +1,13 @@
 <?php $this->extend('web/layouts/app'); ?>
 <?php $this->section('content'); ?>
-<style>
-    .product-features-list{
-        margin-top: 10px !important;
-    }
-    .product-features-list ul {
-    list-style-type: disc !important; /* Forces the bullet points to appear */
-    margin-left: 20px !important;    /* Pushes the list to the right so bullets aren't cut off */
-    padding-left: 10px;
-}
 
-.product-features-list li {
-    font-size: 16px;
-    display: list-item !important;             /* Adds spacing between features */
-    color: #666;
-    font-family: "Poppins", sans-serif;                      /* Optional: matches your product info color */
-}
-.product-features-list ul li::marker {
-    color: #000; /* Replace with your desired color (e.g., Moriz Blue) */
-    font-size: 1.2em; /* Optional: make bullets slightly larger */
-}
+<style>
+    .product-features-list{margin-top: 10px !important;}
+    .product-features-list ul {list-style-type: disc !important;margin-left: 20px !important;padding-left: 10px;}
+    .product-features-list li {font-size: 16px;display: list-item !important;font-family: "Poppins", sans-serif; }
+    .product-features-list ul li::marker {color: #000;font-size: 1.2em;}
 </style>
+
 <?php $mainImage = $gallery[0]['image'] ?? $product['thumbnail'] ?? 'web/assets/images/orthodontics/product.webp'; ?>
 <div class="other_common_banner pad-top-140">
 
@@ -459,31 +446,31 @@
                     <div class="form_row">
                         <div class="form_group">
                             <label>First Name*</label>
-                            <input type="text">
+                            <input type="text" required>
                         </div>
 
                         <div class="form_group">
                             <label>Last Name*</label>
-                            <input type="text">
+                            <input type="text" required>
                         </div>
                     </div>
 
                     <div class="form_row">
                         <div class="form_group">
                             <label>Email Id*</label>
-                            <input type="email">
+                            <input type="email" required>
                         </div>
 
                         <div class="form_group">
                             <label>Phone*</label>
-                            <input type="text">
+                            <input type="text" required>
                         </div>
                     </div>
 
                     <div class="form_row full">
                         <div class="form_group">
                             <label>Message*</label>
-                            <textarea></textarea>
+                            <textarea required></textarea>
                         </div>
                     </div>
 
@@ -538,102 +525,6 @@
 
 <div class="line-area"></div>
 
-<!-- footer-section -->
-
-<div class="container-common ">
-    <div class="ftr-section-moriz gl-mt-60">
-
-        <div class="ftr-container">
-
-
-
-            <!-- LEFT -->
-            <div class="ftr-col ftr-left">
-                <div class="ftr-inner">
-
-                    <div class="ftr-block">
-                        <div class="ftr-title">Site Map</div>
-                        <ul>
-                            <li>Home</li>
-                            <li>About</li>
-                            <li>Products</li>
-                            <li>Features</li>
-                            <li>Contact Us</li>
-                        </ul>
-                    </div>
-
-                    <div class="ftr-block">
-                        <div class="ftr-title">Social</div>
-                        <ul>
-                            <li>Facebook</li>
-                            <li>Instagram</li>
-                            <li>Youtube</li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- CENTER -->
-            <div class="ftr-col ftr-center tab-none">
-
-                <div class="ftr-image-wrap">
-
-                    <!-- MAIN IMAGE -->
-                    <img src="<?= base_url('web/assets/images/home/round-basll.svg')?>" class="ftr-main-img">
-
-                    <!-- SLIDER -->
-                    <div class="ftr-overlay-slider">
-                        <div class="ftr-track" id="ftrTrack">
-
-                            <!-- ORIGINAL SET -->
-                            <img src="<?= base_url('web/assets/images/home/moriz-anim.svg')?>">
-                            <img src="<?= base_url('web/assets/images/home/moriz-anim.svg')?>">
-                            <img src="<?= base_url('web/assets/images/home/moriz-anim.svg')?>">
-
-
-
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- RIGHT -->
-            <div class="ftr-col ftr-right gl-pl-70 gl-lg-pl-10 gl-md-pl-10 gl-sm-pl-0">
-
-                <div class="ftr-desc">
-                    Moriz Meditech is a leading distributor and manufacturer of orthodontic appliances & accessories and
-                    dental instruments.
-                </div>
-
-                <div class="ftr-update-title gl-pt-35">Get Updates</div>
-
-                <div class="ftr-note">
-                    Your information is never disclosed to third parties
-                </div>
-
-                <div class="ftr-input-wrap">
-                    <input type="text" placeholder="Enter Your Email">
-
-                    <button class="ftr-btn-icon">
-                        <img src="<?= base_url('web/assets/images/home/tele-send.svg')?>" alt="arrow">
-                    </button>
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- COPYRIGHT -->
-        <div class="ftr-bottom gl-sm-pt-30">
-            Copyright © 2026 GL Infotech. All rights reserved.
-        </div>
-
-    </div>
-
-</div>
 <div class="wsp-overlay-pop" id="wspPopup">
 
         <div class="wsp-overlay-pop-bg"></div>

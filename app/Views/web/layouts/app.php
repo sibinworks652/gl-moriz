@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="<?= base_url('web/assets/fw-style.css')?>">
     <link rel="stylesheet" href="<?= base_url('web/assets/responsive.css')?>">
     <link rel="stylesheet" href="<?= base_url('web/assets/jest-style.css')?>">
+    <link rel="stylesheet" href="<?= base_url('web/assets/extra-css.css') ?>">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
@@ -22,6 +23,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        .ajax-field-error {
+            display: block;
+            color: #c62828;
+            font-size: 12px;
+            line-height: 1.4;
+            margin-top: 6px;
+        }
+
+        .ajax-form-message {
+            color: #c62828;
+            font-size: 13px;
+            line-height: 1.5;
+            margin-top: 12px;
+        }
+
+        .ajax-form-message.success {
+            color: #1f7a3f;
+        }
+
+        .ajax-honeypot {
+            position: absolute;
+            left: -9999px;
+            opacity: 0;
+            pointer-events: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -52,13 +80,13 @@
                             </div>
                             <ul class="menu-main mb-0-common">
                                 <li>
-                                    <a class="active_line nav_link_vy" href="<?= url_to('index') ?>">Home</a>
+                                    <a class="active_line <?= (url_is('index') || url_is('/')) ? ' nav_link_vy' : '' ?>" href="<?= url_to('index') ?>">Home</a>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="">About Us </a>
+                                <a href="<?= url_to('about') ?>" class="active_line <?= url_is('about*') ? 'nav_link_vy' : '' ?>">About Us</a>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="#">Products <i class="fa fa-angle-down menu-arrow_vy"></i></a>
+                                    <a href="#" class="active_line <?= (url_is('category*') || url_is('product*') ) ? 'nav_link_vy' : '' ?>">Products <i class="fa fa-angle-down menu-arrow_vy"></i></a>
                                     <!-- <div class="sub-menu mega-menu mega-menu-column-4 ">
 
 
@@ -110,7 +138,7 @@
                                     </div>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="">Features </a>
+                                    <a href="<?= url_to('features') ?>" class="active_line <?= url_is('features') ? ' nav_link_vy' : '' ?>">Features </a>
                                 </li>
                             </ul>
                         </nav>
@@ -127,7 +155,7 @@
                     <div class="line-brk">|</div>
                     <a href="tel:+919946574883" class=" gl-po-rel gl-d-flex gl-fd-row gl-align-center gl-gap-5 gl-td-none">
                         <img class="cont-img" src="<?= base_url('web/assets/images/home/contact.svg')?>">
-                        <a href="tel:+919946574883" class="contct-hdr gl-td-none">Contact Us</a>
+                        <a href="<?= url_to('contact') ?>" class="contct-hdr gl-td-none">Contact Us</a>
                     </a>
                 </div>
             </div>
@@ -136,6 +164,101 @@
     <div id="smooth-wrapper">
         <div id="smooth-content">
                 <?= $this->renderSection('content') ?>
+                <div class="container-common ">
+                <div class="ftr-section-moriz gl-mt-60">
+
+                    <div class="ftr-container">
+
+
+
+                        <!-- LEFT -->
+                        <div class="ftr-col ftr-left">
+                            <div class="ftr-inner">
+
+                                <div class="ftr-block">
+                                    <div class="ftr-title">Site Map</div>
+                                    <ul>
+                                        <a href="<?= url_to('index') ?>" class="gl-td-none"><li>Home</li></a>
+                                        <a href="<?= url_to('about') ?>" class="gl-td-none"><li>About</li></a>
+                                        <a href="#" class="gl-td-none"><li>Products</li></a>
+                                        <a href="<?= url_to('features') ?>" class="gl-td-none"><li>Features</li></a>
+                                        <a href="<?= url_to('contact') ?>" class="gl-td-none"><li>Contact Us</li></a>
+                                    </ul>
+                                </div>
+
+                                <div class="ftr-block">
+                                    <div class="ftr-title">Social</div>
+                                    <ul>
+                                        <li>Facebook</li>
+                                        <li>Instagram</li>
+                                        <li>Youtube</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- CENTER -->
+                        <div class="ftr-col ftr-center tab-none">
+
+                            <div class="ftr-image-wrap">
+
+                                <!-- MAIN IMAGE -->
+                                <img src="<?= base_url('web/assets/images/home/round-basll.svg')?>" class="ftr-main-img">
+
+                                <!-- SLIDER -->
+                                <div class="ftr-overlay-slider">
+                                    <div class="ftr-track" id="ftrTrack">
+
+                                        <!-- ORIGINAL SET -->
+                                        <img src="<?= base_url('web/assets/images/home/moriz-anim.svg')?>">
+                                        <img src="<?= base_url('web/assets/images/home/moriz-anim.svg')?>">
+                                        <img src="<?= base_url('web/assets/images/home/moriz-anim.svg')?>">
+
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- RIGHT -->
+                        <div class="ftr-col ftr-right gl-pl-70 gl-lg-pl-10 gl-md-pl-10 gl-sm-pl-0">
+
+                            <div class="ftr-desc">
+                                Moriz Meditech is a leading distributor and manufacturer of orthodontic appliances & accessories and dental instruments.
+                            </div>
+
+                            <div class="ftr-update-title gl-pt-35">Get Updates</div>
+
+                            <div class="ftr-note">
+                                Your information is never disclosed to third parties
+                            </div>
+
+                            <form class="footer-subscribe-form" action="<?= url_to('subscribe-submit') ?>" method="post">
+                                <div class="ftr-input-wrap">
+                                <input type="email" name="email" placeholder="Enter Your Email" required>
+
+                                <button type="submit" class="ftr-btn-icon">
+                                    <img src="<?= base_url('web/assets/images/home/tele-send.svg')?>" alt="arrow">
+                                </button>
+                                </div>
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                    <!-- COPYRIGHT -->
+                    <div class="ftr-bottom gl-sm-pt-30">
+                        Copyright © 2026 GL Infotech. All rights reserved.
+                    </div>
+
+                </div>
+
+            </div>
         </div>
     </div>
     <button class="back-to-top" id="backToTop">
@@ -532,6 +655,198 @@
             // Run on resize
             window.addEventListener("resize", handleMenuImage);
 
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const contactEndpoint = "<?= url_to('contact-submit') ?>";
+            const subscribeEndpoint = "<?= url_to('subscribe-submit') ?>";
+
+            function addSpamFields(form) {
+                if (!form.querySelector('[name="website"]')) {
+                    const website = document.createElement('input');
+                    website.type = 'text';
+                    website.name = 'website';
+                    website.tabIndex = -1;
+                    website.autocomplete = 'off';
+                    website.className = 'ajax-honeypot';
+                    form.appendChild(website);
+                }
+
+                let startedAt = form.querySelector('[name="form_started_at"]');
+                if (!startedAt) {
+                    startedAt = document.createElement('input');
+                    startedAt.type = 'hidden';
+                    startedAt.name = 'form_started_at';
+                    form.appendChild(startedAt);
+                }
+                startedAt.value = Math.floor(Date.now() / 1000);
+            }
+
+            function clearMessages(form) {
+                form.querySelectorAll('.ajax-field-error, .ajax-form-message').forEach(function(item) {
+                    item.remove();
+                });
+            }
+
+            function showFieldError(field, message) {
+                if (!field) return;
+
+                const error = document.createElement('span');
+                error.className = 'ajax-field-error';
+                error.textContent = message;
+                field.insertAdjacentElement('afterend', error);
+            }
+
+            function showFormMessage(form, message, isSuccess) {
+                const messageBox = document.createElement('div');
+                messageBox.className = 'ajax-form-message' + (isSuccess ? ' success' : '');
+                messageBox.textContent = message;
+                form.appendChild(messageBox);
+
+                if (isSuccess) {
+                    setTimeout(function() {
+                        messageBox.remove();
+                    }, 4500);
+                }
+            }
+
+            function setButtonLoading(form, isLoading) {
+                const button = form.querySelector('button[type="submit"], button:not([type])');
+                if (!button) return;
+
+                button.disabled = isLoading;
+                if (isLoading) {
+                    if (button.textContent.trim() !== '') {
+                        button.dataset.originalText = button.textContent;
+                        button.dataset.textWasChanged = '1';
+                        button.textContent = 'Sending...';
+                    }
+                } else if (button.dataset.textWasChanged === '1') {
+                    button.textContent = button.dataset.originalText;
+                    delete button.dataset.textWasChanged;
+                }
+            }
+
+            function postAjax(form, endpoint, data, fieldMap) {
+                clearMessages(form);
+                setButtonLoading(form, true);
+
+                fetch(endpoint, {
+                    method: 'POST',
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest'
+                    },
+                    body: data
+                })
+                    .then(function(response) {
+                        return response.json().then(function(payload) {
+                            if (!response.ok) {
+                                throw payload;
+                            }
+                            return payload;
+                        });
+                    })
+                    .then(function(payload) {
+                        form.reset();
+                        addSpamFields(form);
+                        showFormMessage(form, payload.message || 'Submitted successfully.', true);
+                    })
+                    .catch(function(payload) {
+                        const errors = payload && payload.errors ? payload.errors : {};
+                        Object.keys(errors).forEach(function(key) {
+                            showFieldError(fieldMap[key], errors[key]);
+                        });
+                        showFormMessage(form, (payload && payload.message) || 'Please check the form and try again.', false);
+                    })
+                    .finally(function() {
+                        setButtonLoading(form, false);
+                    });
+            }
+
+            document.querySelectorAll('form.form_inner').forEach(function(form) {
+                addSpamFields(form);
+
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault();
+
+                    const inputs = form.querySelectorAll('input:not([type="hidden"]):not(.ajax-honeypot)');
+                    const message = form.querySelector('textarea');
+                    const data = new FormData();
+                    const fieldMap = {
+                        first_name: inputs[0],
+                        last_name: inputs[1],
+                        email: inputs[2],
+                        phone: inputs[3],
+                        message: message
+                    };
+
+                    data.append('first_name', inputs[0] ? inputs[0].value.trim() : '');
+                    data.append('last_name', inputs[1] ? inputs[1].value.trim() : '');
+                    data.append('email', inputs[2] ? inputs[2].value.trim() : '');
+                    data.append('phone', inputs[3] ? inputs[3].value.trim() : '');
+                    data.append('message', message ? message.value.trim() : '');
+                    data.append('page', window.location.href);
+                    data.append('website', form.querySelector('[name="website"]').value);
+                    data.append('form_started_at', form.querySelector('[name="form_started_at"]').value);
+
+                    postAjax(form, contactEndpoint, data, fieldMap);
+                });
+            });
+
+            document.querySelectorAll('form.footer-subscribe-form').forEach(function(form) {
+                addSpamFields(form);
+
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault();
+
+                    const emailInput = form.querySelector('[name="email"]');
+                    const data = new FormData();
+                    data.append('email', emailInput ? emailInput.value.trim() : '');
+                    data.append('page', window.location.href);
+                    data.append('website', form.querySelector('[name="website"]').value);
+                    data.append('form_started_at', form.querySelector('[name="form_started_at"]').value);
+
+                    postAjax(form, subscribeEndpoint, data, { email: emailInput });
+                });
+            });
+
+            document.querySelectorAll('.ftr-input-wrap').forEach(function(wrapper) {
+                if (wrapper.closest('form.footer-subscribe-form')) {
+                    return;
+                }
+
+                const emailInput = wrapper.querySelector('input');
+                const button = wrapper.querySelector('button');
+                if (!emailInput || !button) {
+                    return;
+                }
+
+                const form = document.createElement('form');
+                form.className = 'footer-subscribe-form';
+                form.action = subscribeEndpoint;
+                form.method = 'post';
+                form.noValidate = false;
+                wrapper.parentNode.insertBefore(form, wrapper);
+                form.appendChild(wrapper);
+                emailInput.type = 'email';
+                emailInput.name = 'email';
+                button.type = 'submit';
+                addSpamFields(form);
+
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault();
+
+                    const data = new FormData();
+                    data.append('email', emailInput.value.trim());
+                    data.append('page', window.location.href);
+                    data.append('website', form.querySelector('[name="website"]').value);
+                    data.append('form_started_at', form.querySelector('[name="form_started_at"]').value);
+
+                    postAjax(form, subscribeEndpoint, data, { email: emailInput });
+                });
+            });
         });
     </script>
     

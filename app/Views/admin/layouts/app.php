@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="<?= base_url('admin/assets/css/AdminLTE.min.css') ?>">
   <link rel="stylesheet" href="<?= base_url('admin/assets/css/_all-skins.min.css') ?>">
   <link rel="stylesheet" href="<?= base_url('admin/assets/css/morris.css') ?>">
+  <link rel="stylesheet" href="<?= base_url('admin/assets/css/extra-css.css') ?>">
   <link rel="stylesheet" href="<?= base_url('admin/assets/css/jquery-jvectormap.css') ?>">
   <link rel="stylesheet" href="<?= base_url('admin/assets/css/bootstrap-datepicker.min.css') ?>">
   <link rel="stylesheet" href="<?= base_url('admin/assets/css/daterangepicker.css') ?>">
