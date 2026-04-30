@@ -56,7 +56,7 @@ class AdminAuthController extends BaseController
     public function dashboard()
     {
         if (session()->get('admin_logged_in') !== true) {
-            return redirect()->to('/morris-admin-login')->with('error', 'Please login first.');
+            return redirect()->to('/moriz-admin-login')->with('error', 'Please login first.');
         }
 
         $categoryModel    = new Category();
@@ -81,6 +81,6 @@ class AdminAuthController extends BaseController
             'admin_role',
         ]);
 
-        return redirect()->to('/morris-admin-login')->with('success', 'You have been logged out.');
+        return redirect()->to('/moriz-admin-login')->with('success', 'You have been logged out.');
     }
 }
