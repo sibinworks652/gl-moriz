@@ -39,3 +39,11 @@ $routes->post('/admin/products/delete/(:num)', 'AdminCatalogController::deletePr
 $routes->get('/', 'WebController::index',['as' => 'index']);
 $routes->get('category/(:segment)', 'WebController::category_detail/$1',['as'=> 'category-detail']);
 $routes->get('product/(:segment)', 'WebController::product_detail/$1', ['as' => 'product-detail']);
+$routes->post('contact-submit', 'WebController::contactSubmit', ['as' => 'contact-submit']);
+$routes->post('subscribe-submit', 'WebController::subscribeSubmit', ['as' => 'subscribe-submit']);
+
+$routes->get('/product-landing', 'WebController::landing_page',['as' => 'product-landing']);
+$routes->get('/about-us', 'WebController::about',['as' => 'about']);
+$routes->get('/contact-us', 'WebController::contact',['as' => 'contact']);
+$routes->get('/features', 'WebController::features',['as' => 'features']);
+$routes->get('/mail-view', 'WebController::mail_view',['as' => 'mail-view']);

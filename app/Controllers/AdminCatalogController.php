@@ -28,7 +28,7 @@ class AdminCatalogController extends BaseController
     private function ensureAdmin()
     {
         if (session()->get('admin_logged_in') !== true) {
-            return redirect()->to('/morris-admin-login')->with('error', 'Please login first.');
+            return redirect()->to('/moriz-admin-login')->with('error', 'Please login first.');
         }
 
         return null;

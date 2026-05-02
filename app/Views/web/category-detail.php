@@ -11,10 +11,10 @@ $showSidebar = ! empty($subcategories);
                 <div class="container-common">
 
                     <!-- Breadcrumb -->
-                    <div class="ocb_breadcrumb">
+                    <div class="ocb_breadcrumb gl-pb-20">
                         <a href="<?= url_to('index') ?>">Home</a>
                         <span>/</span>
-                        <a href="<?= url_to('index') ?>">Products</a>
+                        <a href="<?= url_to('product-landing') ?>">Products</a>
                         <span>/</span>
                         <a href="<?= url_to('category-detail', $category['slug']) ?>" class="active"><?= esc($category['name']) ?></a>
                     </div>
@@ -104,7 +104,7 @@ $showSidebar = ! empty($subcategories);
                                 class="product_item <?= esc($filterClass) ?> <?= $isHidden ?>">
                                     <img src="<?= base_url(esc($product['thumbnail'] ?: 'web/assets/images/orthodontics/product.webp')) ?>" 
                                         alt="<?= esc($product['name']) ?>">
-                                    <p><?= esc($product['name']) ?></p>
+                                    <p><span class="content_truncate-right-content"><?= esc($product['name']) ?></span></p>
                                 </a>
                             <?php endforeach; ?>
                         <?php endif; ?>
@@ -311,7 +311,7 @@ $showSidebar = ! empty($subcategories);
 
                             <div class="qstn_bottom">
                                 <div>My question is not here.</div>
-                                <a href="#" class="qstn_btn">
+                                <a href="<?= url_to('contact') ?>" class="qstn_btn">
                                     <span class="btn_text">Connect Us</span>
                                     <span class="btn_icon">
                                         <!-- 🔥 Paste your SVG here -->
@@ -368,10 +368,11 @@ $showSidebar = ! empty($subcategories);
                                     <img src="<?= base_url('web/assets/images/home/exclamation.svg')?>">
                                 </div>
 
-                                <div class="review-author">Dr. Arjun Menon</div>
-                                <div class="review-role">Prosthodontist</div>
+                                <div class="review-author">Dr. Anita Sharma</div>
+                                <div class="review-role">Dentist</div>
                                 <div class="review-text">
-                                    I’ve been using these dental resins for over a year now, particularly for crown and bridge work, and the consistency has been outstanding.
+                                   "These composite materials have transformed my restorative work. Excellent handling and aesthetics!"
+
                                 </div>
 
                             </div>
@@ -380,22 +381,62 @@ $showSidebar = ! empty($subcategories);
                                 <div class="quote-icon">
                                     <img src="<?= base_url('web/assets/images/home/exclamation.svg')?>">
                                 </div>
-                                <div class="review-author">Dr. Neha Sharma</div>
+                                <div class="review-author">Dr. Aisha Matthew</div>
+                                <div class="review-role">Oral Surgeon</div>
+                                <div class="review-text">
+                                    "Consistently high-quality surgical materials. They've become indispensable in my procedures."
+
+                                </div>
+
+                            </div>
+
+                            <div class="review-card">
+                                <div class="quote-icon">
+                                    <img src="<?= base_url('web/assets/images/home/exclamation.svg')?>">
+                                </div>
+                                <div class="review-author">Rajesh Patel</div>
+                                <div class="review-role">Lab Technician</div>
+                                <div class="review-text">
+                                    "Unmatched precision in impression materials. It's streamlined our lab work significantly."
+
+                                </div>
+
+                            </div>
+
+                            <div class="review-card">
+                                <div class="quote-icon">
+                                    <img src="<?= base_url('web/assets/images/home/exclamation.svg')?>">
+                                </div>
+                                <div class="review-author">Thomas Kurien</div>
                                 <div class="review-role">Orthodontist</div>
                                 <div class="review-text">
-                                    As an orthodontist working with clear aligners and splints, I rely heavily on the quality of my printed models. These resins have delivered excellent durability and dimensional stability, even in high-volume production.
+                                    "Moriz orthodontic supplies are reliable and patient-friendly. A real practice enhancer."
+
                                 </div>
 
                             </div>
-
                             <div class="review-card">
                                 <div class="quote-icon">
                                     <img src="<?= base_url('web/assets/images/home/exclamation.svg')?>">
                                 </div>
-                                <div class="review-author">Rahul Nair</div>
-                                <div class="review-role">Dental Lab Technician</div>
+                                <div class="review-author">Dr. Priya Desai</div>
+                                <div class="review-role">Dentist</div>
                                 <div class="review-text">
-                                    In our lab, we deal with a wide range of applications, from surgical guides to denture bases, and these resins have proven to be extremely versatile.
+                                    "This polishing system has improved my cleaning efficiency. Patients notice the difference!"
+                                </div>
+
+                            </div>
+                            <div class="review-card">
+                                <div class="quote-icon">
+                                    <!-- SVG -->
+                                    <img src="<?= base_url('web/assets/images/home/exclamation.svg')?>">
+                                </div>
+
+                                <div class="review-author">Dr. Anita Sharma</div>
+                                <div class="review-role">Dentist</div>
+                                <div class="review-text">
+                                   "These composite materials have transformed my restorative work. Excellent handling and aesthetics!"
+
                                 </div>
 
                             </div>
@@ -404,10 +445,37 @@ $showSidebar = ! empty($subcategories);
                                 <div class="quote-icon">
                                     <img src="<?= base_url('web/assets/images/home/exclamation.svg')?>">
                                 </div>
-                                <div class="review-author">Dr. Priya Iyer</div>
+                                <div class="review-author">Dr. Aisha Matthew</div>
                                 <div class="review-role">Oral Surgeon</div>
                                 <div class="review-text">
-                                    I primarily use surgical guide resins, and the level of precision offered here is excellent. The guides fit perfectly, which is critical for implant procedures where accuracy is non-negotiable.
+                                    "Consistently high-quality surgical materials. They've become indispensable in my procedures."
+
+                                </div>
+
+                            </div>
+
+                            <div class="review-card">
+                                <div class="quote-icon">
+                                    <img src="<?= base_url('web/assets/images/home/exclamation.svg')?>">
+                                </div>
+                                <div class="review-author">Rajesh Patel</div>
+                                <div class="review-role">Lab Technician</div>
+                                <div class="review-text">
+                                    "Unmatched precision in impression materials. It's streamlined our lab work significantly."
+
+                                </div>
+
+                            </div>
+
+                            <div class="review-card">
+                                <div class="quote-icon">
+                                    <img src="<?= base_url('web/assets/images/home/exclamation.svg')?>">
+                                </div>
+                                <div class="review-author">Thomas Kurien</div>
+                                <div class="review-role">Orthodontist</div>
+                                <div class="review-text">
+                                    "Moriz orthodontic supplies are reliable and patient-friendly. A real practice enhancer."
+
                                 </div>
 
                             </div>
@@ -415,35 +483,14 @@ $showSidebar = ! empty($subcategories);
                                 <div class="quote-icon">
                                     <img src="<?= base_url('web/assets/images/home/exclamation.svg')?>">
                                 </div>
-                                <div class="review-author">Dr. Priya Iyer</div>
-                                <div class="review-role">Oral Surgeon</div>
+                                <div class="review-author">Dr. Priya Desai</div>
+                                <div class="review-role">Dentist</div>
                                 <div class="review-text">
-                                    I primarily use surgical guide resins, and the level of precision offered here is excellent. The guides fit perfectly, which is critical for implant procedures where accuracy is non-negotiable.
+                                    "This polishing system has improved my cleaning efficiency. Patients notice the difference!"
                                 </div>
 
                             </div>
-                            <div class="review-card">
-                                <div class="quote-icon">
-                                    <img src="<?= base_url('web/assets/images/home/exclamation.svg')?>">
-                                </div>
-                                <div class="review-author">Dr. Priya Iyer</div>
-                                <div class="review-role">Oral Surgeon</div>
-                                <div class="review-text">
-                                    I primarily use surgical guide resins, and the level of precision offered here is excellent. The guides fit perfectly, which is critical for implant procedures where accuracy is non-negotiable.
-                                </div>
-
-                            </div>
-                            <div class="review-card">
-                                <div class="quote-icon">
-                                    <img src="<?= base_url('web/assets/images/home/exclamation.svg')?>">
-                                </div>
-                                <div class="review-author">Dr. Priya Iyer</div>
-                                <div class="review-role">Oral Surgeon</div>
-                                <div class="review-text">
-                                    I primarily use surgical guide resins, and the level of precision offered here is excellent. The guides fit perfectly, which is critical for implant procedures where accuracy is non-negotiable.
-                                </div>
-
-                            </div>
+                     
 
                         </div>
                     </div>
@@ -490,7 +537,7 @@ $showSidebar = ! empty($subcategories);
                                     </div>
                                     <div>
                                         <div class="info_label">EMAIL ID</div>
-                                        <a href="mailto:moriza@dental.com" target="_blank" class="info_text gl-td-none">moriza@dental.com</a>
+                                        <a href="mailto:morizmeditech@gmail.com" target="_blank" class="info_text gl-td-none">morizmeditech@gmail.com</a>
                                     </div>
                                 </div>
 
@@ -538,31 +585,31 @@ $showSidebar = ! empty($subcategories);
                                 <div class="form_row">
                                     <div class="form_group">
                                         <label>First Name*</label>
-                                        <input type="text">
+                                        <input type="text" required>
                                     </div>
 
                                     <div class="form_group">
                                         <label>Last Name*</label>
-                                        <input type="text">
+                                        <input type="text" required>
                                     </div>
                                 </div>
 
                                 <div class="form_row">
                                     <div class="form_group">
                                         <label>Email Id*</label>
-                                        <input type="email">
+                                        <input type="email" required>
                                     </div>
 
                                     <div class="form_group">
                                         <label>Phone*</label>
-                                        <input type="text">
+                                        <input type="text" required>
                                     </div>
                                 </div>
 
                                 <div class="form_row full">
                                     <div class="form_group">
                                         <label>Message*</label>
-                                        <textarea></textarea>
+                                        <textarea required></textarea>
                                     </div>
                                 </div>
 
@@ -594,131 +641,10 @@ $showSidebar = ! empty($subcategories);
             </div>
 
             <div class="dwnld_catalogue">
-                <?php if (! empty($category['catalogue_file'])): ?>
-                <a href="<?= base_url($category['catalogue_file']) ?>" download>
-                    <span class="text">Download Catalogue</span>
-
-
-                    <!-- Corner Borders -->
-                    <span class="corner top-left"></span>
-                    <span class="corner top-right"></span>
-                    <span class="corner bottom-left"></span>
-                    <span class="corner bottom-right"></span>
-                </a>
-                <?php else: ?>
-                <a href="#">
-                    <span class="text">Download Catalogue</span>
-
-
-                    <!-- Corner Borders -->
-                    <span class="corner top-left"></span>
-                    <span class="corner top-right"></span>
-                    <span class="corner bottom-left"></span>
-                    <span class="corner bottom-right"></span>
-                </a>
-                <?php endif; ?>
             </div>
 
             <div class="line-area"></div>
 
-            <!-- footer-section -->
-
-            <div class="container-common ">
-                <div class="ftr-section-moriz gl-mt-60">
-
-                    <div class="ftr-container">
-
-
-
-                        <!-- LEFT -->
-                        <div class="ftr-col ftr-left">
-                            <div class="ftr-inner">
-
-                                <div class="ftr-block">
-                                    <div class="ftr-title">Site Map</div>
-                                    <ul>
-                                        <li>Home</li>
-                                        <li>About</li>
-                                        <li>Products</li>
-                                        <li>Features</li>
-                                        <li>Contact Us</li>
-                                    </ul>
-                                </div>
-
-                                <div class="ftr-block">
-                                    <div class="ftr-title">Social</div>
-                                    <ul>
-                                        <li>Facebook</li>
-                                        <li>Instagram</li>
-                                        <li>Youtube</li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <!-- CENTER -->
-                        <div class="ftr-col ftr-center tab-none">
-
-                            <div class="ftr-image-wrap">
-
-                                <!-- MAIN IMAGE -->
-                                <img src="<?= base_url('web/assets/images/home/round-basll.svg')?>" class="ftr-main-img">
-
-                                <!-- SLIDER -->
-                                <div class="ftr-overlay-slider">
-                                    <div class="ftr-track" id="ftrTrack">
-
-                                        <!-- ORIGINAL SET -->
-                                        <img src="<?= base_url('web/assets/images/home/moriz-anim.svg')?>">
-                                        <img src="<?= base_url('web/assets/images/home/moriz-anim.svg')?>">
-                                        <img src="<?= base_url('web/assets/images/home/moriz-anim.svg')?>">
-
-
-
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <!-- RIGHT -->
-                        <div class="ftr-col ftr-right gl-pl-70 gl-lg-pl-10 gl-md-pl-10 gl-sm-pl-0">
-
-                            <div class="ftr-desc">
-                                Moriz Meditech is a leading distributor and manufacturer of orthodontic appliances & accessories and dental instruments.
-                            </div>
-
-                            <div class="ftr-update-title gl-pt-35">Get Updates</div>
-
-                            <div class="ftr-note">
-                                Your information is never disclosed to third parties
-                            </div>
-
-                            <div class="ftr-input-wrap">
-                                <input type="text" placeholder="Enter Your Email">
-
-                                <button class="ftr-btn-icon">
-                                    <img src="<?= base_url('web/assets/images/home/tele-send.svg')?>" alt="arrow">
-                                </button>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <!-- COPYRIGHT -->
-                    <div class="ftr-bottom gl-sm-pt-30">
-                        Copyright © 2026 GL Infotech. All rights reserved.
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-    </div>
 
 
 
