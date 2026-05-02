@@ -6,9 +6,9 @@
 
                     <!-- Breadcrumb -->
                     <div class="ocb_breadcrumb gl-pb-20">
-                        <a href="#">Home</a>
+                        <a href="<?= url_to('index') ?>">Home</a>
                         <span>/</span>
-                        <a href="#">Features</a>
+                        <a href="<?= url_to('features') ?>">Features</a>
 
                     </div>
 
@@ -17,7 +17,7 @@
 
                         <div class="ocb_content">
                             <h1 class="gl-w-50">Features</h1>
-                            <p class="gl-w-60">Designed to deliver performance, efficiency, and a seamless experience.
+                            <p class="gl-w-60 gl-xs-w-90">Designed to deliver performance, efficiency, and a seamless experience.
                             </p>
 
 
@@ -38,9 +38,9 @@
 
                     <!-- Heading -->
                     <div class="moriz_header">
-                        <div class="moriz_tag gl-mb-10">Features</div>
-                        <div class="moriz_title">The Moriz Advantage</div>
-                        <div class="moriz_desc">
+                        <div class="moriz_tag gl-mb-10 slide-up">Features</div>
+                        <div class="moriz_title slide-up">The Moriz Advantage</div>
+                        <div class="moriz_desc slide-up">
                             Moriz delivers top-quality, cost-effective dental materials. We understand your challenges and offer tailored solutions, becoming your partner in success.
                         </div>
                     </div>
@@ -187,7 +187,7 @@
 
                             <div class="qstn_bottom">
                                 <div>My question is not here.</div>
-                                <a href="#" class="qstn_btn">
+                                <a href="<?= url_to('contact') ?>" class="qstn_btn">
                                     <span class="btn_text">Connect Us</span>
                                     <span class="btn_icon">
                                         <!-- 🔥 Paste your SVG here -->
@@ -243,7 +243,7 @@
                                     </div>
                                     <div>
                                         <div class="info_label">EMAIL ID</div>
-                                        <a href="mailto:moriza@dental.com" target="_blank" class="info_text gl-td-none">moriza@dental.com</a>
+                                        <a href="mailto:morizmeditech@gmail.com" target="_blank" class="info_text gl-td-none">morizmeditech@gmail.com</a>
                                     </div>
                                 </div>
 

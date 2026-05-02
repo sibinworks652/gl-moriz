@@ -24,7 +24,7 @@
   <?= $this->renderSection('pageStyles') ?>
   <style>
     .content-wrapper {
-      min-height: 100vh !important;
+      height: 100% !important;
     }
     .box .table td,
     .box .table th {
@@ -47,8 +47,8 @@
   ?>
   <header class="main-header">
     <a href="<?= base_url('admin/dashboard') ?>" class="logo">
-      <span class="logo-mini"><b>M</b>R</span>
-      <span class="logo-lg"><b>Moriz</b> Admin</span>
+      <span class="logo-mini"><b>M</b>Z</span>
+      <span class="logo-lg"><img src="<?= base_url('web/assets/images/moriz-logo-mail.png') ?>" width="60%" alt="Moriz Logo"></span>
     </a>
     <nav class="navbar navbar-static-top">
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
@@ -119,7 +119,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.4.0
     </div>
-    <strong>Copyright &copy; <a target="_blank" href="https://glinfotech.net">GL Infotech</a>.</strong> All rights reserved.
+    <strong>All Rights Reserved © <?= date('Y') ?> - Website Designed by <a href="https://glinfotech.net" target="_blank">GL Infotech</a></strong> 
   </footer>
 </div>
 

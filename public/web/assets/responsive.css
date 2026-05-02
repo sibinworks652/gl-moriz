@@ -68,6 +68,9 @@
     .gallery_vy_slide {
         padding-left: 90px;
     }
+    .pad-top-140 {
+        padding-top: 40px !important;
+    }
 }
 
 @media (max-width:1600px) {
@@ -126,7 +129,7 @@
         padding: 0 100px;
     }
     .counter_number {
-        font-size: 24px;
+        font-size: 24px !important;
         line-height: 41px;
     }
 }
@@ -334,6 +337,13 @@
     .journey_right {
         justify-content: start;
     }
+    .counter_number {
+        font-size: 20px !important;
+        line-height: 26px;
+    }
+    .counter_number {
+        line-height: 30px !important;
+    }
 }
 
 @media (max-width:1200px) {
@@ -491,7 +501,13 @@
         line-height: 17px;
     }
     .abt-us-wrapper {
-        flex-direction: column;
+        flex-direction: column !important;
+    }
+    .abt-us-left {
+        width: 100% !important;
+    }
+    .abt-us-right {
+        width: 100% !important;
     }
 }
 
@@ -735,6 +751,15 @@
         padding-bottom: 10px;
         padding-left: 20px;
     }
+    .dis-blk {
+        display: block;
+    }
+}
+
+@media (min-width:991px) {
+    .dis-blk {
+        display: none;
+    }
 }
 
 @media (max-width:950px) {
@@ -828,7 +853,7 @@
         padding: 15px;
     }
     .journy_excellence_area {
-        padding: 50px 20px;
+        padding: 50px 20px !important;
     }
     .year {
         font-size: 59px;
@@ -929,9 +954,9 @@
     .customer-review-area {
         padding: 25px 0px 45px 20px;
     }
-    .country-list {
+    /* .country-list {
         display: none;
-    }
+    } */
     .review-header {
         display: flex;
         justify-content: space-between;
@@ -1106,9 +1131,6 @@
         font-size: 14px;
         line-height: 24px;
     }
-    .contct-hdr {
-        display: none !important;
-    }
     .abt_banner-inner {
         padding-bottom: 10px;
         padding-left: 10px;
@@ -1116,7 +1138,7 @@
     }
     .abt-us-section {
         width: 100%;
-        padding: 30px 0;
+        padding: 30px 0 !important;
     }
     .abt-title {
         font-size: 25px;
@@ -1151,7 +1173,7 @@
         font-size: 22px;
     }
     .moriz_advanatage_sec {
-        padding: 45px 0;
+        padding: 45px 0 !important;
     }
     .moriz_header {
         text-align: center;
@@ -1165,11 +1187,23 @@
     }
     .journey_heading {
         font-size: 26px;
-        line-height: 31px;
+        line-height: 34px;
     }
     .journey_video {
         width: 188px;
         height: 51px;
+    }
+    .content_vy {
+        position: absolute;
+        top: 82%;
+    }
+    .beyond_head {
+        text-align: center;
+        max-width: 700px;
+        margin: 23px auto 30px;
+    }
+    .beyond_head h2 {
+        margin-bottom: 10px;
     }
 }
 
@@ -1235,11 +1269,8 @@
     .dots {
         width: 350px;
     }
-    .contct-hdr {
-        display: none;
-    }
     .gap-right {
-        gap: 12px;
+        gap: 2px;
     }
     .stat_item_vy {
         display: flex;
@@ -1401,6 +1432,9 @@
         font-size: 15px;
         line-height: 23px;
     }
+    .logo-width-cmn {
+        padding-left: 10px;
+    }
 }
 
 @media (min-width: 575px) {
@@ -1425,5 +1459,15 @@
 @media (max-width: 420px) {
     .stat_item_vy .counter {
         font-size: 22px;
+    }
+    .header .item-right a {
+        margin-left: 0px;
+    }
+    .country-item {
+        font-size: 10px;
+        padding: 6px 5px;
+    }
+    .logo-width-cmn {
+        width: 120px;
     }
 }

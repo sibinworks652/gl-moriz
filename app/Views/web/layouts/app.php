@@ -6,23 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moriz</title>
-    <link rel="stylesheet" href="<?= base_url('web/assets/style.css')?>">
-    <link rel="stylesheet" href="<?= base_url('web/assets/jest-style.css')?>">
-    <link rel="stylesheet" href="<?= base_url('web/assets/fw-style.css')?>">
-    <link rel="stylesheet" href="<?= base_url('web/assets/responsive.css')?>">
-    <link rel="stylesheet" href="<?= base_url('web/assets/jest-style.css')?>">
-    <link rel="stylesheet" href="<?= base_url('web/assets/extra-css.css') ?>">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
-    <link rel="icon" href="<?= base_url('web/assets/images/home/fav.svg')?>" type="image/x-icon">
+    <link rel="stylesheet" href="<?= base_url('web/assets/style.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('web/assets/jest-style.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('web/assets/fw-style.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('web/assets/responsive.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('web/assets/jest-style.css') ?>">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+    <link rel="icon" href="<?= base_url('web/assets/images/home/fav.svg') ?>" type="image/x-icon">
     <link rel="icon" href="" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <style>
         .ajax-field-error {
             display: block;
@@ -65,7 +69,7 @@
                 <div class="header-item item-left  logo-section pad-right-view">
                     <a href="<?= url_to('index') ?>" class="logo gl-td-none">
 
-                        <img class="logo-width-cmn" src="<?= base_url('web/assets/images/home/moriz-logo.svg')?>">
+                        <img class="logo-width-cmn" src="<?= base_url('web/assets/images/home/moriz-logo.svg') ?>">
                     </a>
                 </div>
                 <!-- menu start here -->
@@ -80,13 +84,17 @@
                             </div>
                             <ul class="menu-main mb-0-common">
                                 <li>
-                                    <a class="active_line <?= (url_is('index') || url_is('/')) ? ' nav_link_vy' : '' ?>" href="<?= url_to('index') ?>">Home</a>
+                                    <a class="active_line <?= (url_is('index') || url_is('/')) ? ' nav_link_vy' : '' ?>"
+                                        href="<?= url_to('index') ?>">Home</a>
                                 </li>
                                 <li class="menu-item-has-children">
-                                <a href="<?= url_to('about') ?>" class="active_line <?= url_is('about*') ? 'nav_link_vy' : '' ?>">About Us</a>
+                                    <a href="<?= url_to('about') ?>"
+                                        class="active_line <?= url_is('about*') ? 'nav_link_vy' : '' ?>">About Us</a>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="#" class="active_line <?= (url_is('category*') || url_is('product*') ) ? 'nav_link_vy' : '' ?>">Products <i class="fa fa-angle-down menu-arrow_vy"></i></a>
+                                    <a href="#"
+                                        class="active_line <?= (url_is('category*') || url_is('product*')) ? 'nav_link_vy' : '' ?>">Products
+                                        <i class="fa fa-angle-down menu-arrow_vy"></i></a>
                                     <!-- <div class="sub-menu mega-menu mega-menu-column-4 ">
 
 
@@ -116,20 +124,19 @@
                                                 <div class="menu-links">
                                                     <?php if (!empty($headerCategories)): ?>
                                                         <?php foreach ($headerCategories as $cat): ?>
-                                                            <a href="<?= base_url('category/' . $cat['slug']) ?>" 
-                                                            class="listing" 
-                                                            data-img="<?= base_url($cat['thumbnail']) ?>">
-                                                            <?= esc($cat['name']) ?>
+                                                            <a href="<?= base_url('category/' . $cat['slug']) ?>"
+                                                                class="listing" data-img="<?= base_url($cat['thumbnail']) ?>">
+                                                                <?= esc($cat['name']) ?>
                                                             </a>
                                                         <?php endforeach; ?>
                                                     <?php endif; ?>
                                                 </div>
 
                                                 <div class="menu-images">
-                                                    <?php 
-                                                        $defaultImg = !empty($headerCategories) 
-                                                            ? base_url($headerCategories[0]['thumbnail']) 
-                                                            : base_url('web/assets/images/home/hv-one.webp'); 
+                                                    <?php
+                                                    $defaultImg = !empty($headerCategories)
+                                                        ? base_url($headerCategories[0]['thumbnail'])
+                                                        : base_url('web/assets/images/home/hv-one.webp');
                                                     ?>
                                                     <img src="<?= $defaultImg ?>" id="menuPreview">
                                                 </div>
@@ -138,7 +145,14 @@
                                     </div>
                                 </li>
                                 <li class="menu-item-has-children">
-                                    <a href="<?= url_to('features') ?>" class="active_line <?= url_is('features') ? ' nav_link_vy' : '' ?>">Features </a>
+                                    <a href="<?= url_to('features') ?>"
+                                        class="active_line <?= url_is('features') ? ' nav_link_vy' : '' ?>">Features
+                                    </a>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="<?= url_to('contact') ?>"
+                                        class="active_line dis-blk <?= url_is('features') ? ' nav_link_vy' : '' ?>">Contact
+                                        Us </a>
                                 </li>
                             </ul>
                         </nav>
@@ -146,15 +160,16 @@
                 </div>
                 <div class="header-item item-right gap-right">
                     <div class="country-list">
-                        <div class="country-item active gl-cursor-p">INDIA</div>
+                        <div class="country-item active ">INDIA</div>
                         <div class="divider"></div>
-                        <div class="country-item gl-cursor-p">UAE</div>
+                        <div class="country-item ">UAE</div>
                         <div class="divider"></div>
-                        <div class="country-item gl-cursor-p">UK</div>
+                        <div class="country-item ">UK</div>
                     </div>
                     <div class="line-brk">|</div>
-                    <a href="tel:+919946574883" class=" gl-po-rel gl-d-flex gl-fd-row gl-align-center gl-gap-5 gl-td-none">
-                        <img class="cont-img" src="<?= base_url('web/assets/images/home/contact.svg')?>">
+                    <a href="tel:+919946574883"
+                        class=" gl-po-rel gl-d-flex gl-fd-row gl-align-center gl-gap-5 gl-td-none">
+                        <img class="cont-img" src="<?= base_url('web/assets/images/home/contact.svg') ?>">
                         <a href="<?= url_to('contact') ?>" class="contct-hdr gl-td-none">Contact Us</a>
                     </a>
                 </div>
@@ -163,8 +178,8 @@
     </header>
     <div id="smooth-wrapper">
         <div id="smooth-content">
-                <?= $this->renderSection('content') ?>
-                <div class="container-common ">
+            <?= $this->renderSection('content') ?>
+            <div class="container-common ">
                 <div class="ftr-section-moriz gl-mt-60">
 
                     <div class="ftr-container">
@@ -178,20 +193,32 @@
                                 <div class="ftr-block">
                                     <div class="ftr-title">Site Map</div>
                                     <ul>
-                                        <a href="<?= url_to('index') ?>" class="gl-td-none"><li>Home</li></a>
-                                        <a href="<?= url_to('about') ?>" class="gl-td-none"><li>About</li></a>
-                                        <a href="#" class="gl-td-none"><li>Products</li></a>
-                                        <a href="<?= url_to('features') ?>" class="gl-td-none"><li>Features</li></a>
-                                        <a href="<?= url_to('contact') ?>" class="gl-td-none"><li>Contact Us</li></a>
+                                        <a href="<?= url_to('index') ?>" class="gl-td-none">
+                                            <li>Home</li>
+                                        </a>
+                                        <a href="<?= url_to('about') ?>" class="gl-td-none">
+                                            <li>About Us</li>
+                                        </a>
+                                        <a href="<?= url_to('product-landing') ?>" class="gl-td-none">
+                                            <li>Products</li>
+                                        </a>
+                                        <a href="<?= url_to('features') ?>" class="gl-td-none">
+                                            <li>Features</li>
+                                        </a>
+                                        <a href="<?= url_to('contact') ?>" class="gl-td-none">
+                                            <li>Contact Us</li>
+                                        </a>
                                     </ul>
                                 </div>
 
                                 <div class="ftr-block">
                                     <div class="ftr-title">Social</div>
                                     <ul>
-                                        <li>Facebook</li>
-                                        <li>Instagram</li>
-                                        <li>Youtube</li>
+                                        <a class="gl-td-none" target="_blank" href="https://www.facebook.com/profile.php?id=61572108437006"> <li>Facebook</li></a>
+                                        <a class="gl-td-none" target="_blank" href="https://www.instagram.com/moriz_meditech?igsh=YmltdWttOTkwaXBv&utm_source=qr"> <li>Instagram</li></a>
+                                        <a class="gl-td-none" target="_blank" href="https://www.linkedin.com/company/115494030/admin/dashboard/"> <li>Linkedin</li></a>
+                                       
+                                        
                                     </ul>
                                 </div>
 
@@ -204,16 +231,17 @@
                             <div class="ftr-image-wrap">
 
                                 <!-- MAIN IMAGE -->
-                                <img src="<?= base_url('web/assets/images/home/round-basll.svg')?>" class="ftr-main-img">
+                                <img src="<?= base_url('web/assets/images/home/round-basll.webp') ?>"
+                                    class="ftr-main-img">
 
                                 <!-- SLIDER -->
                                 <div class="ftr-overlay-slider">
                                     <div class="ftr-track" id="ftrTrack">
 
                                         <!-- ORIGINAL SET -->
-                                        <img src="<?= base_url('web/assets/images/home/moriz-anim.svg')?>">
-                                        <img src="<?= base_url('web/assets/images/home/moriz-anim.svg')?>">
-                                        <img src="<?= base_url('web/assets/images/home/moriz-anim.svg')?>">
+                                        <img src="<?= base_url('web/assets/images/home/moriz-anim.svg') ?>">
+                                        <img src="<?= base_url('web/assets/images/home/moriz-anim.svg') ?>">
+                                        <img src="<?= base_url('web/assets/images/home/moriz-anim.svg') ?>">
 
 
 
@@ -228,7 +256,8 @@
                         <div class="ftr-col ftr-right gl-pl-70 gl-lg-pl-10 gl-md-pl-10 gl-sm-pl-0">
 
                             <div class="ftr-desc">
-                                Moriz Meditech is a leading distributor and manufacturer of orthodontic appliances & accessories and dental instruments.
+                                Moriz Meditech is a leading distributor and manufacturer of orthodontic appliances &
+                                accessories and dental instruments.
                             </div>
 
                             <div class="ftr-update-title gl-pt-35">Get Updates</div>
@@ -237,13 +266,14 @@
                                 Your information is never disclosed to third parties
                             </div>
 
-                            <form class="footer-subscribe-form" action="<?= url_to('subscribe-submit') ?>" method="post">
+                            <form class="footer-subscribe-form" action="<?= url_to('subscribe-submit') ?>"
+                                method="post">
                                 <div class="ftr-input-wrap">
-                                <input type="email" name="email" placeholder="Enter Your Email" required>
+                                    <input type="email" name="email" placeholder="Enter Your Email" required>
 
-                                <button type="submit" class="ftr-btn-icon">
-                                    <img src="<?= base_url('web/assets/images/home/tele-send.svg')?>" alt="arrow">
-                                </button>
+                                    <button type="submit" class="ftr-btn-icon">
+                                        <img src="<?= base_url('web/assets/images/home/tele-send.svg') ?>" alt="arrow">
+                                    </button>
                                 </div>
                             </form>
 
@@ -253,7 +283,8 @@
 
                     <!-- COPYRIGHT -->
                     <div class="ftr-bottom gl-sm-pt-30">
-                        Copyright © 2026 GL Infotech. All rights reserved.
+                        Copyright © 2026 <a class="gl-td-none gl-text-black" href="https://www.glinfotech.net/"
+                            target="_blank">GL Infotech</a>. All rights reserved.
                     </div>
 
                 </div>
@@ -270,7 +301,7 @@
 
     <div class="whatsapp-float">
         <a href="https://wa.me/+918590070532" target="_blank">
-            <img src="<?= base_url('web/assets/images/home/wsp-ico.svg')?>" alt="WhatsApp" class="whatsapp-img">
+            <img src="<?= base_url('web/assets/images/home/wsp-ico.svg') ?>" alt="WhatsApp" class="whatsapp-img">
         </a>
     </div>
     <?= $this->renderSection('scripts') ?>
@@ -279,7 +310,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
 
-    
+
 
     <script>
         document.addEventListener("DOMContentLoaded", (event) => {
@@ -346,7 +377,7 @@
             menu.querySelector(".mobile-menu-head").classList.remove("active");
         }
 
-        window.onresize = function() {
+        window.onresize = function () {
             if (this.innerWidth > 991) {
                 if (menu.classList.contains("active")) {
                     toggleMenu();
@@ -386,8 +417,8 @@
                         }
                     });
                 }, {
-                    threshold: 0.3 // 30% visible triggers animation
-                }
+                threshold: 0.3 // 30% visible triggers animation
+            }
             );
 
             animatedItems.forEach(item => observer.observe(item));
@@ -417,25 +448,25 @@
     </script>
 
 
-    <script>
+    <!-- <script>
         document.addEventListener("DOMContentLoaded", function() {
 
             const data = [{
-                    img: "<?= base_url('web/assets/images/home/aligner.webp')?>",
+                    img: "<?= base_url('web/assets/images/home/aligner.webp') ?>",
                     text: "Aligners",
                     number: "01"
                 }, {
-                    img: "<?= base_url('web/assets/images/home/orthodontics.webp')?>",
+                    img: "<?= base_url('web/assets/images/home/orthodontics.webp') ?>",
                     text: "Orthodontics",
                     number: "02"
                 },
 
                 {
-                    img: "<?= base_url('web/assets/images/home/burs.webp')?>",
+                    img: "<?= base_url('web/assets/images/home/burs.webp') ?>",
                     text: "Burs & Files",
                     number: "03"
                 }, {
-                    img: "<?= base_url('web/assets/images/home/handpiecee.webp')?>",
+                    img: "<?= base_url('web/assets/images/home/handpiecee.webp') ?>",
                     text: "Handpeice",
                     number: "04"
                 }
@@ -477,9 +508,65 @@
             setInterval(updateBanner, 5000);
 
         });
-    </script>
+    </script> -->
 
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const data = [
+            <?php foreach ($headerCategories as $index => $category): ?>
+            {
+                img: "<?= base_url($category['thumbnail']) ?>",
+                text: "<?= addslashes($category['name']) ?>",
+                number: "<?= str_pad($index + 1, 2, '0', STR_PAD_LEFT) ?>", // Added missing comma
+                link: "<?= url_to('category-detail', $category['slug']) ?>"
+            },
+            <?php endforeach; ?>
+        ];
 
+        if (data.length === 0) return;
+
+        let banrIndex = 0;
+        const image = document.getElementById("banrImage");
+        const text = document.getElementById("banrText");
+        const number = document.getElementById("banrNumber");
+        const link = document.getElementById("banrLink"); // Reference the <a> tag
+
+        function setInitialContent() {
+            image.src = data[0].img;
+            text.innerText = data[0].text;
+            number.innerText = data[0].number;
+            link.href = data[0].link; // Set initial link
+            
+            image.style.opacity = "1";
+            text.style.opacity = "1";
+            number.style.opacity = "1";
+        }
+
+        function rotateBanner() {
+            // Fade out
+            image.style.opacity = "0";
+            text.style.opacity = "0";
+            number.style.opacity = "0";
+
+            setTimeout(() => {
+                banrIndex = (banrIndex + 1) % data.length;
+
+                image.src = data[banrIndex].img;
+                text.innerText = data[banrIndex].text;
+                number.innerText = data[banrIndex].number;
+                link.href = data[banrIndex].link; // Update link on rotation
+
+                // Fade in
+                image.style.opacity = "1";
+                text.style.opacity = "1";
+                number.style.opacity = "1";
+            }, 400);
+        }
+
+        setInitialContent();
+        setInterval(rotateBanner, 5000);
+    });
+</script>
 
     <script>
         const items = document.querySelectorAll(".qstn_item");
@@ -620,7 +707,7 @@
     </script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
 
             const menuItemsList = document.querySelectorAll('.listing');
             const menuPreviewImg = document.getElementById('menuPreview');
@@ -659,7 +746,7 @@
     </script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             const contactEndpoint = "<?= url_to('contact-submit') ?>";
             const subscribeEndpoint = "<?= url_to('subscribe-submit') ?>";
 
@@ -685,7 +772,7 @@
             }
 
             function clearMessages(form) {
-                form.querySelectorAll('.ajax-field-error, .ajax-form-message').forEach(function(item) {
+                form.querySelectorAll('.ajax-field-error, .ajax-form-message').forEach(function (item) {
                     item.remove();
                 });
             }
@@ -706,7 +793,7 @@
                 form.appendChild(messageBox);
 
                 if (isSuccess) {
-                    setTimeout(function() {
+                    setTimeout(function () {
                         messageBox.remove();
                     }, 4500);
                 }
@@ -740,35 +827,35 @@
                     },
                     body: data
                 })
-                    .then(function(response) {
-                        return response.json().then(function(payload) {
+                    .then(function (response) {
+                        return response.json().then(function (payload) {
                             if (!response.ok) {
                                 throw payload;
                             }
                             return payload;
                         });
                     })
-                    .then(function(payload) {
+                    .then(function (payload) {
                         form.reset();
                         addSpamFields(form);
                         showFormMessage(form, payload.message || 'Submitted successfully.', true);
                     })
-                    .catch(function(payload) {
+                    .catch(function (payload) {
                         const errors = payload && payload.errors ? payload.errors : {};
-                        Object.keys(errors).forEach(function(key) {
+                        Object.keys(errors).forEach(function (key) {
                             showFieldError(fieldMap[key], errors[key]);
                         });
                         showFormMessage(form, (payload && payload.message) || 'Please check the form and try again.', false);
                     })
-                    .finally(function() {
+                    .finally(function () {
                         setButtonLoading(form, false);
                     });
             }
 
-            document.querySelectorAll('form.form_inner').forEach(function(form) {
+            document.querySelectorAll('form.form_inner').forEach(function (form) {
                 addSpamFields(form);
 
-                form.addEventListener('submit', function(event) {
+                form.addEventListener('submit', function (event) {
                     event.preventDefault();
 
                     const inputs = form.querySelectorAll('input:not([type="hidden"]):not(.ajax-honeypot)');
@@ -795,10 +882,10 @@
                 });
             });
 
-            document.querySelectorAll('form.footer-subscribe-form').forEach(function(form) {
+            document.querySelectorAll('form.footer-subscribe-form').forEach(function (form) {
                 addSpamFields(form);
 
-                form.addEventListener('submit', function(event) {
+                form.addEventListener('submit', function (event) {
                     event.preventDefault();
 
                     const emailInput = form.querySelector('[name="email"]');
@@ -812,7 +899,7 @@
                 });
             });
 
-            document.querySelectorAll('.ftr-input-wrap').forEach(function(wrapper) {
+            document.querySelectorAll('.ftr-input-wrap').forEach(function (wrapper) {
                 if (wrapper.closest('form.footer-subscribe-form')) {
                     return;
                 }
@@ -835,7 +922,7 @@
                 button.type = 'submit';
                 addSpamFields(form);
 
-                form.addEventListener('submit', function(event) {
+                form.addEventListener('submit', function (event) {
                     event.preventDefault();
 
                     const data = new FormData();
@@ -849,7 +936,196 @@
             });
         });
     </script>
-    
+
+
+    <script>
+        // gsap animations
+        function animateOnScroll(className, effect = "fade", options = {}) {
+            const elements = document.querySelectorAll(className);
+            const isMobile = window.innerWidth <= 768;
+            elements.forEach((el, index) => {
+                let animProps = {};
+                switch (effect) {
+                    case "fade":
+                        animProps = {
+                            opacity: 0
+                        };
+                        break;
+                    case "slide-up":
+                        animProps = {
+                            opacity: 0,
+                            y: 50
+                        };
+                        break;
+                    case "slide-down":
+                        animProps = {
+                            opacity: 0,
+                            y: -50
+                        };
+                        break;
+                    case "slide-left":
+                        animProps = {
+                            opacity: 0,
+                            x: -50
+                        };
+                        break;
+                    case "slide-right":
+                        animProps = {
+                            opacity: 0,
+                            x: 50
+                        };
+                        break;
+                    case "zoom":
+                        animProps = {
+                            opacity: 0,
+                            scale: 0.8
+                        };
+                        break;
+                    case "rotate":
+                        animProps = {
+                            opacity: 0,
+                            rotation: 45
+                        };
+                        break;
+                    default:
+                        animProps = {
+                            opacity: 0
+                        };
+                }
+
+                gsap.from(el, {
+                    ...animProps,
+                    duration: options.duration || 1,
+                    delay: (options.delay || 0) + (options.delayIncrement || 0) * index,
+                    ease: options.ease || "power2.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: isMobile ? (options.startMobile || "top 95%") :
+                            (options.start || "top 90%"),
+                        toggleActions: options.toggleActions || "play none none reverse"
+                    }
+                });
+            });
+        }
+
+        /*** Text animations (with letter or word stagger support) */
+        function animateTextOnScroll(className, effect = "text-fade", options = {}) {
+            const elements = document.querySelectorAll(className);
+            const isMobile = window.innerWidth <= 768;
+
+            elements.forEach(el => {
+                let targets = el;
+
+                // Split text for stagger
+                if (options.stagger) {
+                    const text = el.textContent.trim();
+                    if (options.staggerType === "words") {
+                        el.innerHTML = text.split(" ").map(word => `<span class="word">${word}&nbsp;</span>`).join("");
+                    } else {
+                        el.innerHTML = text.split("").map(ch => `<span>${ch}</span>`).join("");
+                    }
+                    targets = el.querySelectorAll("span");
+                }
+
+                let animProps = {};
+                switch (effect) {
+                    case "text-fade":
+                        animProps = {
+                            opacity: 0
+                        };
+                        break;
+                    case "text-slide-up":
+                        animProps = {
+                            opacity: 0,
+                            y: 30
+                        };
+                        break;
+                    case "text-slide-down":
+                        animProps = {
+                            opacity: 0,
+                            y: -30
+                        };
+                        break;
+                    case "text-zoom":
+                        animProps = {
+                            opacity: 0,
+                            scale: 0.9
+                        };
+                        break;
+                    case "text-rotate":
+                        animProps = {
+                            opacity: 0,
+                            rotationX: 90
+                        };
+                        break;
+                    default:
+                        animProps = {
+                            opacity: 0
+                        };
+                }
+
+                gsap.from(targets, {
+                    ...animProps,
+                    duration: options.duration || 1,
+                    delay: options.delay || 0,
+                    ease: options.ease || "power2.out",
+                    stagger: options.stagger || 0,
+                    transformOrigin: "center bottom",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: isMobile ? (options.startMobile || "top 95%") :
+                            (options.start || "top 80%"),
+                        toggleActions: options.toggleActions || "play none none reverse"
+                    }
+                });
+            });
+        }
+
+
+        // gsap animations
+        window.addEventListener("load", () => {
+            if (typeof gsap !== "undefined" &&
+                typeof ScrollTrigger !== "undefined" &&
+                typeof animateOnScroll === "function") {
+
+                gsap.registerPlugin(ScrollTrigger);
+
+                animateOnScroll(".g-zoom-in", "zoom");
+                animateOnScroll(".g-fade-in", "fade", {
+                    delay: 0.2
+                });
+                animateOnScroll(".g-slide-down-in", "slide-down");
+                animateOnScroll(".g-slide-left-in", "slide-left");
+                animateOnScroll(".g-slide-right-in", "slide-right");
+                animateOnScroll(".g-rotate-in", "rotate");
+                animateOnScroll(".g-slide-up", "slide-up", {
+                    delay: 0.1
+                });
+            }
+        });
+
+        window.addEventListener("load", () => {
+            if (typeof gsap !== "undefined" &&
+                typeof ScrollTrigger !== "undefined" &&
+                typeof animateTextOnScroll === "function") {
+
+                gsap.registerPlugin(ScrollTrigger);
+                // Text stagger (letters)
+                animateTextOnScroll(".g-text-stagger-letters", "text-slide-up", {
+                    stagger: 0.05,
+                    duration: 0.8
+                });
+                // Text stagger (words)
+                animateTextOnScroll(".g-text-stagger-words", "text-slide-up", {
+                    stagger: 0.15,
+                    duration: 1,
+                    staggerType: "words"
+                });
+
+            }
+        });
+    </script>
+
 </body>
 
 </html>

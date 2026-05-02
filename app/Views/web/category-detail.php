@@ -11,10 +11,10 @@ $showSidebar = ! empty($subcategories);
                 <div class="container-common">
 
                     <!-- Breadcrumb -->
-                    <div class="ocb_breadcrumb">
+                    <div class="ocb_breadcrumb gl-pb-20">
                         <a href="<?= url_to('index') ?>">Home</a>
                         <span>/</span>
-                        <a href="<?= url_to('index') ?>">Products</a>
+                        <a href="<?= url_to('product-landing') ?>">Products</a>
                         <span>/</span>
                         <a href="<?= url_to('category-detail', $category['slug']) ?>" class="active"><?= esc($category['name']) ?></a>
                     </div>
@@ -104,7 +104,7 @@ $showSidebar = ! empty($subcategories);
                                 class="product_item <?= esc($filterClass) ?> <?= $isHidden ?>">
                                     <img src="<?= base_url(esc($product['thumbnail'] ?: 'web/assets/images/orthodontics/product.webp')) ?>" 
                                         alt="<?= esc($product['name']) ?>">
-                                    <p><?= esc($product['name']) ?></p>
+                                    <p><span class="content_truncate-right-content"><?= esc($product['name']) ?></span></p>
                                 </a>
                             <?php endforeach; ?>
                         <?php endif; ?>
@@ -368,10 +368,11 @@ $showSidebar = ! empty($subcategories);
                                     <img src="<?= base_url('web/assets/images/home/exclamation.svg')?>">
                                 </div>
 
-                                <div class="review-author">Dr. Arjun Menon</div>
-                                <div class="review-role">Prosthodontist</div>
+                                <div class="review-author">Dr. Anita Sharma</div>
+                                <div class="review-role">Dentist</div>
                                 <div class="review-text">
-                                    I’ve been using these dental resins for over a year now, particularly for crown and bridge work, and the consistency has been outstanding.
+                                   "These composite materials have transformed my restorative work. Excellent handling and aesthetics!"
+
                                 </div>
 
                             </div>
@@ -380,22 +381,62 @@ $showSidebar = ! empty($subcategories);
                                 <div class="quote-icon">
                                     <img src="<?= base_url('web/assets/images/home/exclamation.svg')?>">
                                 </div>
-                                <div class="review-author">Dr. Neha Sharma</div>
+                                <div class="review-author">Dr. Aisha Matthew</div>
+                                <div class="review-role">Oral Surgeon</div>
+                                <div class="review-text">
+                                    "Consistently high-quality surgical materials. They've become indispensable in my procedures."
+
+                                </div>
+
+                            </div>
+
+                            <div class="review-card">
+                                <div class="quote-icon">
+                                    <img src="<?= base_url('web/assets/images/home/exclamation.svg')?>">
+                                </div>
+                                <div class="review-author">Rajesh Patel</div>
+                                <div class="review-role">Lab Technician</div>
+                                <div class="review-text">
+                                    "Unmatched precision in impression materials. It's streamlined our lab work significantly."
+
+                                </div>
+
+                            </div>
+
+                            <div class="review-card">
+                                <div class="quote-icon">
+                                    <img src="<?= base_url('web/assets/images/home/exclamation.svg')?>">
+                                </div>
+                                <div class="review-author">Thomas Kurien</div>
                                 <div class="review-role">Orthodontist</div>
                                 <div class="review-text">
-                                    As an orthodontist working with clear aligners and splints, I rely heavily on the quality of my printed models. These resins have delivered excellent durability and dimensional stability, even in high-volume production.
+                                    "Moriz orthodontic supplies are reliable and patient-friendly. A real practice enhancer."
+
                                 </div>
 
                             </div>
-
                             <div class="review-card">
                                 <div class="quote-icon">
                                     <img src="<?= base_url('web/assets/images/home/exclamation.svg')?>">
                                 </div>
-                                <div class="review-author">Rahul Nair</div>
-                                <div class="review-role">Dental Lab Technician</div>
+                                <div class="review-author">Dr. Priya Desai</div>
+                                <div class="review-role">Dentist</div>
                                 <div class="review-text">
-                                    In our lab, we deal with a wide range of applications, from surgical guides to denture bases, and these resins have proven to be extremely versatile.
+                                    "This polishing system has improved my cleaning efficiency. Patients notice the difference!"
+                                </div>
+
+                            </div>
+                            <div class="review-card">
+                                <div class="quote-icon">
+                                    <!-- SVG -->
+                                    <img src="<?= base_url('web/assets/images/home/exclamation.svg')?>">
+                                </div>
+
+                                <div class="review-author">Dr. Anita Sharma</div>
+                                <div class="review-role">Dentist</div>
+                                <div class="review-text">
+                                   "These composite materials have transformed my restorative work. Excellent handling and aesthetics!"
+
                                 </div>
 
                             </div>
@@ -404,10 +445,37 @@ $showSidebar = ! empty($subcategories);
                                 <div class="quote-icon">
                                     <img src="<?= base_url('web/assets/images/home/exclamation.svg')?>">
                                 </div>
-                                <div class="review-author">Dr. Priya Iyer</div>
+                                <div class="review-author">Dr. Aisha Matthew</div>
                                 <div class="review-role">Oral Surgeon</div>
                                 <div class="review-text">
-                                    I primarily use surgical guide resins, and the level of precision offered here is excellent. The guides fit perfectly, which is critical for implant procedures where accuracy is non-negotiable.
+                                    "Consistently high-quality surgical materials. They've become indispensable in my procedures."
+
+                                </div>
+
+                            </div>
+
+                            <div class="review-card">
+                                <div class="quote-icon">
+                                    <img src="<?= base_url('web/assets/images/home/exclamation.svg')?>">
+                                </div>
+                                <div class="review-author">Rajesh Patel</div>
+                                <div class="review-role">Lab Technician</div>
+                                <div class="review-text">
+                                    "Unmatched precision in impression materials. It's streamlined our lab work significantly."
+
+                                </div>
+
+                            </div>
+
+                            <div class="review-card">
+                                <div class="quote-icon">
+                                    <img src="<?= base_url('web/assets/images/home/exclamation.svg')?>">
+                                </div>
+                                <div class="review-author">Thomas Kurien</div>
+                                <div class="review-role">Orthodontist</div>
+                                <div class="review-text">
+                                    "Moriz orthodontic supplies are reliable and patient-friendly. A real practice enhancer."
+
                                 </div>
 
                             </div>
@@ -415,35 +483,14 @@ $showSidebar = ! empty($subcategories);
                                 <div class="quote-icon">
                                     <img src="<?= base_url('web/assets/images/home/exclamation.svg')?>">
                                 </div>
-                                <div class="review-author">Dr. Priya Iyer</div>
-                                <div class="review-role">Oral Surgeon</div>
+                                <div class="review-author">Dr. Priya Desai</div>
+                                <div class="review-role">Dentist</div>
                                 <div class="review-text">
-                                    I primarily use surgical guide resins, and the level of precision offered here is excellent. The guides fit perfectly, which is critical for implant procedures where accuracy is non-negotiable.
+                                    "This polishing system has improved my cleaning efficiency. Patients notice the difference!"
                                 </div>
 
                             </div>
-                            <div class="review-card">
-                                <div class="quote-icon">
-                                    <img src="<?= base_url('web/assets/images/home/exclamation.svg')?>">
-                                </div>
-                                <div class="review-author">Dr. Priya Iyer</div>
-                                <div class="review-role">Oral Surgeon</div>
-                                <div class="review-text">
-                                    I primarily use surgical guide resins, and the level of precision offered here is excellent. The guides fit perfectly, which is critical for implant procedures where accuracy is non-negotiable.
-                                </div>
-
-                            </div>
-                            <div class="review-card">
-                                <div class="quote-icon">
-                                    <img src="<?= base_url('web/assets/images/home/exclamation.svg')?>">
-                                </div>
-                                <div class="review-author">Dr. Priya Iyer</div>
-                                <div class="review-role">Oral Surgeon</div>
-                                <div class="review-text">
-                                    I primarily use surgical guide resins, and the level of precision offered here is excellent. The guides fit perfectly, which is critical for implant procedures where accuracy is non-negotiable.
-                                </div>
-
-                            </div>
+                     
 
                         </div>
                     </div>
@@ -490,7 +537,7 @@ $showSidebar = ! empty($subcategories);
                                     </div>
                                     <div>
                                         <div class="info_label">EMAIL ID</div>
-                                        <a href="mailto:moriza@dental.com" target="_blank" class="info_text gl-td-none">moriza@dental.com</a>
+                                        <a href="mailto:morizmeditech@gmail.com" target="_blank" class="info_text gl-td-none">morizmeditech@gmail.com</a>
                                     </div>
                                 </div>
 

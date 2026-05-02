@@ -125,7 +125,11 @@ class WebController extends BaseController
 
 
     public function landing_page(){
-        return view('web/product-landing');
+        $categoryModel     = new \App\Models\Category();
+        $activeCategories = $categoryModel->where('status', 'active')->findAll();
+        return view('web/product-landing',[
+            'categories'      => $activeCategories,
+        ]);
     }
     public function about(){
         return view('web/about-us');
